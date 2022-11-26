@@ -1,0 +1,182 @@
+{% extends 'inc/main.html' %} {% block title %} Home {% endblock title %} {%block content%} {% load static %}
+<header class="top-background">
+    <nav class="navbar navbar-expand-lg" id="nav-bg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <h1 class="sj-logo">SJ GIFTS</h1>
+            </a>
+            <button class="navbar-toggler " style="color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span style="color: white;" class="navbar-toggler-icon default"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link a-link" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link a-link" href="#activity">ACTIVITY</a>
+                    </li>
+                    <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link a-link" href="#gallery">GALLERY</a>
+                        </li>
+                        <li class="nav-item">
+                            <li class="nav-item">
+                                <a class="nav-link a-link" href="#contact">CONTACT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link a-link" href="{%url 'register' %}">DONATE</a>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Activity -->
+
+<section id="activity" class="bg-light my-2" style="min-height:600px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mb-3 text-center" data-aos="fade-down" id="h4-g">Activity</h4>
+                <hr style="border-color:#b8bfc2;">
+            </div>
+            {%for images in img %}
+
+            <div class="col-md-4">
+                <div class="card my-3" data-aos="fade-down">
+                    <img src="{{images.image.url}}" alt="images" height="50%" width="100%" class="card-image-top">
+                    <p style="text-align:justify;padding: 10px;">{{images.description}}</p>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</section>
+<!-- Gallery -->
+
+
+<section id="gallery" class="my-2" style="min-height:600px;">
+    <h4 class="mb-3 text-center" id="h4-g" data-aos="fade-down">Gallery</h4>
+    <hr style="border-color:#b8bfc2;">
+
+    <div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4" data-aos="fade-right">
+
+
+                    <img style="padding: 30px;" src="{%static 'images\CHARITY1.jpg'%}" class="d-block w-100" alt="Slide 1" height="300px" height="300px">
+                </div>
+                <div class="col-sm-4" data-aos="fade-left">
+                    <img style="padding: 30px;" src="{%static 'images\CHARITY2.jpg'%}" class="d-block w-100" alt="Slide 1" height="300px">
+
+                </div>
+                <div class="col-sm-4" data-aos="fade-right">
+                    <img style="padding: 30px;" src="{%static 'images\CHARITY3.jpg'%}" class="d-block w-100" alt="Slide 1" height="300px">
+                    </a>
+                </div>
+                <div class="col-sm-4" data-aos="fade-left">
+                    <img style="padding: 30px;" src="{%static 'images\CHARITY5.jpg'%}" class="d-block w-100" alt="Slide 1" height="300px">
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Donate -->
+<section id="gallery" class="my-2 bg-light" style="min-height:600px;">
+    <h4 class="mb-3 text-center" id="h4-g" data-aos="fade-down">Donate</h4>
+    <hr style="border-color:#b8bfc2;">
+    <div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 card" data-aos="fade-right">
+                    <a href="{%url 'register' %}" style="text-decoration: none;">
+
+                        <img style="padding: 30px;" src="{% static 'images/egg.jpg' %}" class="d-block w-100" alt="Slide 1" height="300px" height="300px">
+                        <h5 style="text-align: center; color:rgb(26, 26, 202)">EGG</h5>
+                    </a>
+                </div>
+                <div class="col-sm-4 card" data-aos="fade-left">
+                    <a href="{%url 'register' %}" style="text-decoration: none;">
+
+                        <img style="padding: 30px;" src="{% static 'images/FOOD.jpg' %}" class="d-block w-100" alt="Slide 1" height="300px">
+                        <h5 style="text-decoration: none; text-align: center; color:rgb(26, 26, 202)">FOOD</h5>
+                    </a>
+                </div>
+                <div class="col-sm-4 card" data-aos="fade-right">
+                    <a href="{%url 'register' %}" style="text-decoration: none;">
+
+                        <img style="padding: 30px;" src="{% static 'images/stationary.jpg' %}" class="d-block w-100" alt="Slide 1" height="300px">
+                        <h5 style="text-decoration: none; text-align: center; color:rgb(26, 26, 202)">STATIONARY</h5>
+                    </a>
+                </div>
+                <div class="col-sm-4 card" data-aos="fade-left">
+
+                    <a href="{%url 'register' %}" style="text-decoration: none;"><img style="padding: 30px;" src="{% static 'images/dress1.jpg' %}" class="d-block w-100" alt="Slide 1" height="300px">
+                        <h5 style="text-decoration: none; text-align: center; color:rgb(26, 26, 202)">DRESS</h5>
+                    </a>
+                </div>
+                <div class="col-sm-4 card" data-aos="fade-right">
+
+                    <a href="{%url 'register' %}" style="text-decoration: none;"><img style="padding: 30px;" src="{% static 'images/bedsheets.jpg' %}" class="d-block w-100" alt="Slide 1" height="300px">
+                        <h5 style="text-decoration: none; text-align: center; color:rgb(26, 26, 202)">BED SHEETS</h5>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact -->
+<section id="contact" class="my-2" style="min-height:600px;">
+    <h4 class="mb-3 text-center my-2" id="h4-g" data-aos="fade-down">CONTACT US</h4>
+    <hr style="border-color:#b8bfc2;">
+    <div class="container">
+
+
+        <div class="col-sm-6 c-form" data-aos="fade-down">
+            <form action="" method="post">
+                {%csrf_token%}
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" class="form-control">
+                <label for="name">Message</label>
+                <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+                <input type="submit" class="c-btn" value="Send Message">
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+</section>
+
+
+<footer style="background-color: rgb(13, 13, 80);">
+
+    <div class="footer">
+        <div class="font-s">
+            <a href=""><i class="fa-brands fa-facebook "></i></a>
+            <a href="#contact"><i class="fa-regular fa-envelope "></i></a>
+            <a href=""><i id="font-i" class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p style="text-align: center; color:white;background-color: rgb(34, 20, 158);">&copy;Copy Rigth 2022</p>
+    </div>
+</footer>
+
+{%endblock content%}

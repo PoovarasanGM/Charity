@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>
+        {% block title %} {% endblock title %}
+    </title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- new boostrap link -->
+
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css'%}' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'css/aos.css'%}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css'%}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fancybox.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+
+
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- fontawesome -->
+
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    {% block content %} {% endblock content %} {% block scripts %}
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Boostrap js -->
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+    <script src="{% static 'js/popper.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js'%}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap-datepicker.js'%}"></script>
+
+    <script src="{% static 'js/jquery.fancybox.min.js'%}"></script>
+
+    <script src="{% static 'js/aos.js'%}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js'%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{% static 'js/google-map.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+
+    <!--  -->
+    <link rel="stylesheet" href="{% static 'js/index.js' %}">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    {% endblock scripts %}
+
+
+</body>
+
+</html>
